@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Microsoft Clarity Tracking Code -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w7ay6z5cia");
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #222;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 20px;
+      color: #00c3ff;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #00c3ff;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #00c3ff, #0044ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 10px 25px;
+      border: none;
+      background: white;
+      color: black;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .features {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 20px;
+    }
+
+    .feature-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .feature-box {
+      background: #f4f4f4;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    .about {
+      padding: 50px 20px;
+      background: #eee;
+      text-align: center;
+    }
+
+    .contact {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .contact form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .contact button {
+      padding: 10px 20px;
+      border: none;
+      background: #00c3ff;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>MyBrand</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h2>Build Your Website Easily</h2>
+      <p>Simple, clean and responsive landing page.</p>
+      <button onclick="goToContact()">Get Started</button>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Features</h2>
+    <div class="feature-container">
+      <div class="feature-box">
+        <h3>Fast</h3>
+        <p>Quick loading and smooth design.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Responsive</h3>
+        <p>Works on mobile and desktop.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Simple</h3>
+        <p>Easy to edit and customize.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>This is a basic landing page made using HTML, CSS and JavaScript.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 MyBrand</p>
+  </footer>
+
+  <script>
+    function goToContact() {
+      document.getElementById("contact").scrollIntoView();
+    }
+
+    function submitForm(e) {
+      e.preventDefault();
+      alert("Message sent!");
+    }
+  </script>
+
+</body>
+</html>
